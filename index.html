@@ -5,6 +5,7 @@
         <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
         <meta name ="viewport" content = "width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href = "style.css"> 
+        <script src="https://kit.fontawesome.com/a337e0c680.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="header">
@@ -35,17 +36,127 @@
                         <img src="images/melmao.jpg">
                     </div>
                     <div class="about-col-2">
-                        <h1 class = "sub-title"> About<span> Me</span>
+                        <h1 class = "sub-title"> About<span> Me</span></h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
                             nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
                             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
                             pariatur. Excepteur sint occaecat cupidatat non proident, 
-                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p> </h1>
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+                        <div class ="tab-titles">
+                            <p class ="tab-links active-link" onclick = "opentab('skills')">Skills</p>
+                            <p class ="tab-links" onclick = "opentab('experience')">Experience</p>
+                            <p class ="tab-links" onclick = "opentab('education')">Education</p>
+
+                        </div>
+                        <div class="tab-contents active-tab" id ="skills">
+                            <ul>    <!----Skills--->
+                                <li><span>UI?UX</span><br>RandomSkills</li>
+                                <li><span>UI?UX</span><br>RandomSkills</li>
+                                <li><span>UI?UX</span><br>RandomSkills</li>
+                                <li><span>UI?UX</span><br>RandomSkills</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id ="experience">
+                            <ul>    <!----EXP--->
+                                <li><span>UI?UX</span><br>RandomSkills</li>
+                                <li><span>UI?UX</span><br>RandomSkills</li>
+                                <li><span>UI?UX</span><br>RandomSkills</li>
+                                <li><span>UI?UX</span><br>RandomSkills</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id ="education">
+                            <ul>    <!----EDU--->
+                                <li><span>UI?UX</span><br>RandomSkills</li>
+                                <li><span>UI?UX</span><br>RandomSkills</li>
+                                <li><span>UI?UX</span><br>RandomSkills</li>
+                                <li><span>UI?UX</span><br>RandomSkills</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!----projects------->
+        <div id= "projects"> 
+            <div class=" container">
+                <h1 class="sub-title">My Projects</h1>
+                <div class = "projects-list">
+                <div>
+                    <i class="fa-sharp fa-solid fa-code"></i>
+                    <h2>This Website</h2>
+                    <p>This website was a way for me to refresh my skills in HTML and CSS, while at the same
+                        time being able to create a meaningfull portfolio</p>
+                    <a href = "#"> Learn More</a>
+                    
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-python"></i>
+                    <h2>Soon tm</h2>
+                    <p></p>
+                    <a href = "#"> Learn More</a>
+                    
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-headphones"></i>
+                    <h2>Soon tm</h2>
+                    <p></p>
+                    <a href = "#"> Learn More</a>
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+
+    <!----Contact ME--->
+    <div id ="contact"> 
+        <div class ="container">
+            <div class = "row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> talhaahmed@vt.edu</p>
+                    <p><i class="fa-solid fa-phone"></i>7142131539</p>
+                    <div class="social-icons">
+                        <a href="www.linkedin.com/in/talha-ahmed19"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Over-Heat"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name = "Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+        <!-- about me tags script-->
+    <script> 
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    
+    
     </body>
 </html>
