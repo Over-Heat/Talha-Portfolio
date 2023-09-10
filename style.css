@@ -236,7 +236,7 @@ nav ul li a:hover::after{
 
 .social-icons a:hover{
     color:#ff004f;
-    transform: translateY(-5px)
+    transform: translateY(-5px);
 
 }
 
@@ -357,11 +357,13 @@ nav .fa-solid{
         left: 25px;
         cursor: pointer;
     }
+
+    /* contact me fix*/
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
 }
-/* contact me fix*/
-.contact-left, .contact-right{
-    flex-basis: 100%;
-}
+
 
 #msg{
 color: #61b752;
