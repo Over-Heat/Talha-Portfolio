@@ -4,6 +4,10 @@
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+    
+}
 body{
     background: #080808;
     color: #fff;
@@ -310,4 +314,103 @@ nav ul li a:hover::after{
 }
 .btn:hover{
     background: #ff004f;
+}
+
+
+/* css for small screen */
+
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    /* side bar */
+    nav ul{
+        background: #ff004f ;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+}
+/* contact me fix*/
+.contact-left, .contact-right{
+    flex-basis: 100%;
+}
+
+#msg{
+color: #61b752;
+margin-top: -30px;
+display: block;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.btn.btn2{
+    display: inline-block;
+    background: #31b5ff;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+#footer{
+    margin-top: 80px;
+    padding: 1.2em 0;
+    background: #ff004f;
+    bottom: 0;
+    margin-right: -33px;
+    font-family: "Fjalla One", Verdana, Geneva, sans-serif;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    width: 100%;
+    clear: both;
 }

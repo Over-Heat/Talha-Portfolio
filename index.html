@@ -13,11 +13,11 @@
                 <nav>
                     <img src ="images/T.png" class = "logo">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Resume</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Hobbies</a></li>
+                        <li><a href="#portfolio">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
                 <div class = "header-text">
@@ -116,7 +116,7 @@
                 <h1 class="sub-title">My Work</h1>
                 <div class="work-list">
                     <div class="work">
-                        <img src="images/Temp.png">
+                        <img src="images/website.png">
                         <div class="layer">
                             <h3>This Website</h3>
                             <p>Created through HTML, CSS, and Js</p>
@@ -167,11 +167,48 @@
                     </form>
                 </div>
             </div>
+            <footer id = "footer"> Created by Talha Ahmed, 2023</footer>
         </div>
     </div>
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+    
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-200px";
+        }
+    </script>
 
+<script>
+    var sidemeu = document.getElementById("sidemenu");
 
-
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz2627I541cVtOcz05bnd-gIMsm8kjnvl3dgiTYCwAKS37zwVbSdZU0RAJGvQrkir8/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
 
 
