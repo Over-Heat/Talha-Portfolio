@@ -422,7 +422,7 @@ form .btn2{
     clear: both;
 }
 
-/* typwrite stuff */
+/* typwrite stuff NAME */
 .typed{
     overflow: hidden;
     white-space: nowrap;
@@ -437,3 +437,8 @@ form .btn2{
     from { width: 0 }
     to { width: 100% }
   }
+
+  /* IM a ... bit*/
+  .typing{
+    margin-bottom: 50px;
+  } 
