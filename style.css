@@ -109,6 +109,7 @@ nav ul li a:hover::after{
 .sub-title{
     font-size: 90px;
     font-weight: 600;
+    margin: 25px;
     color:#fff;
 }
 
