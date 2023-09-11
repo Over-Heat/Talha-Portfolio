@@ -379,7 +379,11 @@ display: block;
 }
 .btn.btn2{
     display: inline-block;
-    background: #31b5ff;
+    background: #ff004f;
+}
+.btn.btn2:hover{
+    display: inline-block;
+    background: #61b752;
 }
 .contact-right form{
     width: 100%;
