@@ -251,11 +251,18 @@ nav ul li a:hover::after{
     grid-gap: 40px;
     margin-top: 50px;
 }
-.work{
+.work {
     border-radius: 10px;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* This ensures the image doesn't overflow outside the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
 }
+
+
+
 .work img{
     width: 100%;
     border-radius: 10px;
