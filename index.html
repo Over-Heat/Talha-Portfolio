@@ -32,6 +32,31 @@
             </div>
             
         </div>
+        <!-----------------Script-------------->
+        <script>
+            let correctAnswer;
+        
+            function generateQuestion() {
+                const num1 = Math.floor(Math.random() * 21); // Random num between 1 and 10
+                const num2 = Math.floor(Math.random() * 21); // Random num between 1 and 10
+                correctAnswer = num1 + num2; // Change this to any operation you want
+                document.getElementById('math-question').innerText = `What is ${num1} + ${num2}?`;
+            }
+        
+            function checkAnswer() {
+                const userAnswer = document.getElementById('user-answer').value;
+                if (parseInt(userAnswer) === correctAnswer) {
+                    window.open('file_holder/Ahmed_Resume.pdf', '_blank'); // Open the resume if correct
+                } else {
+                    alert("Incorrect answer. Please try again.");
+                    document.getElementById('user-answer').value = ''; // Clear the input
+                    generateQuestion(); // Generate a new question
+                }
+            }
+        
+            // Generate the question on page load
+            window.onload = generateQuestion;
+        </script>
 
         <!-----------------About--------------->
         <div id ="about">
@@ -42,14 +67,26 @@
                     </div>
                     <div class="about-col-2">
                         <h1 class = "sub-title"> About<span> Me</span></h1>
-                        <p>Currently a sophomore at Virginia Tech. Majoring in Business Information Technology and always looking for new opportunities
+                        <p>Currently a Junior at Virginia Tech. Majoring in Cyber Managment Analytics and always looking for new opportunities
                             to collect knowledge in the field of IT and cyber security.</p>
                         <div class ="tab-titles">
-                            <p class ="tab-links active-link" onclick = "opentab('skills')">Skills</p>
+                            <p class ="tab-links active-link" onclick = "opentab('resume')">Resume</p>
+                            <p class ="tab-links " onclick = "opentab('skills')">Skills</p>
                             <p class ="tab-links" onclick = "opentab('experience')">Experience</p>
                             <p class ="tab-links" onclick = "opentab('education')">Education</p>
                         </div>
-                        <div class="tab-contents active-tab" id ="skills">
+                        <div class="tab-contents active-tab" id="resume">
+                            <ul>
+                                <li><span>Here is my resume, have a look! The math question is there to prevent scraping :)</span></li>
+                                <li id="math-question"></li>
+                                <li>
+                                    <input type="number" id="user-answer" placeholder="Your answer" required>
+                                    <button onclick="checkAnswer()">Submit Answer</button>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-contents" id ="skills">
                             <ul>    <!----Skills--->
                                 <li><span>Python</span>
                                 <li><span>Cyber Security</span>
